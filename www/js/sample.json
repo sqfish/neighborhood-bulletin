@@ -1,0 +1,25 @@
+{
+  "posts": [
+  {
+      "category": "Market",
+      "content": [
+              {
+              "body":"I have a ton of shit to sell. Come and get it!",
+              "image": "http://eaglecountryonline.com/wp-content/uploads/awpcp/yard-sale1.jpg",
+              "title": "Yard Sale"
+               }
+                  ],
+      "location": [
+                {
+                "address": "2166 Brookview Dr",
+                "city": "Nashville",
+                "state": "TN",
+                "zip": "37206"
+                }
+                  ],
+      "timestamp": "",
+      "uid": ""
+    }
+  ]
+ 
+}

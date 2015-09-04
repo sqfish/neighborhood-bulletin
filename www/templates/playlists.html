@@ -1,9 +1,56 @@
 <ion-view view-title="Playlists">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
-      </ion-item>
-    </ion-list>
+    <div class="row">
+      <div class="col-80 col-offset-10">
+        <div class="list card" ng-repeat="group in groups">
+          <div class="item item-avatar" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+            <div class="row catRow">
+              <div class="col-33">
+                {{group.category}}
+              </div>
+              <div class="col-33 col-offset-33">
+                {{group.location.address}}
+              </div>
+            </div>
+            <div class= "row quickInfo">
+              <div class="col-25 quickImage">
+                <img src="{{group.content.image}}" height="100%" width= "100%">
+              </div>
+              <div class="col-75 quickTitle">
+                <h1>{{group.content.title}}</h1>
+              </div>
+            </div>
+               <!--  {{group.uid}} -->
+                <div class="col col- col-offset-50">
+                  <p>
+                    <a href="#" class="subdued">1 Like</a>
+                    <a href="#" class="subdued">5 Comments</a>
+                  </p>
+                </div>
+          </div>
+
+          <div class="item item-body item-accordion" ng-show="isGroupShown(group)">
+              <div class="contentBody col-50 col-offset-25">
+                <h3>{{group.content.body}}</h3>
+              </div>
+          </div>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#">
+              <i class="icon ion-thumbsup"></i>
+              Like
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-chatbox"></i>
+              Comment
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-share"></i>
+              Share
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
