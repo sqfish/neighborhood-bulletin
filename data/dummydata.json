@@ -1,0 +1,20 @@
+{
+    "posts": [
+        {
+            "category": "market",
+            "location": {
+                "address": "2166 Brookview Dr",
+                "city": "Nashville",
+                "state": "TN",
+                "zip": "37214"
+            },
+            "content": {
+                "title": "Yard Sale",
+                "body": "Come buy my shit",
+                "image": "http://fscomps.fotosearch.com/compc/CSP/CSP993/k14309403.jpg"
+            },
+            "uid": "",
+            "timeStamp": ""
+        }
+    ]
+}
