@@ -1,0 +1,31 @@
+<ion-view view-title="Create Post">
+  <ion-content>
+    <form ng-submit="postData()">
+      <div class="list">
+      <ion-item class="item-divider">
+        <i class="icon {{categoryObject.icon}}"></i>
+        {{categoryObject.title}}
+      </ion-item>
+        <label class="item item-input">
+          <span class="input-label">Title</span>
+          <input type="text" ng-model="newPost.content.title">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Date</span>
+          <input type="date" ng-model="newPost.timeStamp.date">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Time</span>
+          <input type="time" ng-model="newPost.timeStamp.time">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Description</span>
+          <textarea ng-model="newPost.content.body"></textarea>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Post</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

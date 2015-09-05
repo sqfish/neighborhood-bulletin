@@ -1,0 +1,13 @@
+<ion-view view-title="Create Post">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-divider">
+        Categories
+      </ion-item>
+      <ion-item ng-repeat="type in posttypes" href="#/app/post/{{type.id}}" on-tap="onTap({{type}})" class="item item-icon-left">
+        <i class="icon {{type.icon}}"></i>
+        {{type.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
