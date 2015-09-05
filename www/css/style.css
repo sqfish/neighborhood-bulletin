@@ -23,14 +23,89 @@ body {
   display: block !important;
 }
 
-.item-avatar{
+.mainDiv{
   padding-left:20px;
+  padding-top: 10px;
 }
+
 .catRow{
   padding:0;
   margin-bottom:10px;
   border-bottom: 1px solid #eee;
 }
-.quickInfo{
-  height: 75px;
+.locationDiv{
+  color: #bbb;
 }
+
+.quickInfo{
+  height: 85px;
+}
+.imageDiv{
+  height:100px;
+  width: 100px;
+  padding:10px;
+}
+.imgContent{
+
+}
+.quickTitle{
+  padding-top: 20px;
+/*padding-left: 20px;*/
+  text-align: center;
+}
+
+.likeCommentsCount{
+  width: 100%;
+}
+.moreInfoDiv{
+    height: 100%;
+    min-height: 100px;
+    max-height: 200px;
+    overflow: auto;
+}
+.contentBody{
+  height:100%;
+  text-align:center;
+ /* padding-left:20px;*/
+  width:475px;
+  min-height: 100px;
+  /*max-height: 100px;*/
+  border:1px dotted red;
+  margin-left:20px;
+}
+.userInfo{
+  height:100%;
+  border:1px dotted blue;
+}
+.userContent{
+  border:1px dotted green;
+}
+.userImg{
+  height: 50px;
+  width: 50px;
+  border-radius:50px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
