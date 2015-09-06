@@ -17,7 +17,7 @@ angular.module('starter.newpostform', ["newpoststorage"])
         "state": "",
         "zip": ""
       },
-      "timeStamp": {
+      "timestamp": {
         "date": "",
         "time": ""
       },
@@ -28,6 +28,9 @@ angular.module('starter.newpostform', ["newpoststorage"])
       $scope.newPost.category = $scope.categoryObject.title;
     });
     $scope.postData = function() {
+      var newDate = document.getElementById("newDate").value;
+      $scope.newPost.timestamp.date = document.getElementById("newDate").value;
+      $scope.newPost.timestamp.time = document.getElementById("newTime").value;
       $scope.postlist.$add($scope.newPost);
     }
   }
