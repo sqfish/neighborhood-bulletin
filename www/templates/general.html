@@ -1,8 +1,8 @@
-<ion-view view-title="Home">
+<ion-view view-title="General">
   <ion-content>
     <div class="row">
       <div class="col-80 col-offset-10">
-        <div class="list card" ng-repeat="group in groups">
+        <div class="list card" ng-repeat="group in groups | filter: {'category': 'general'}">
           <div class="item item-avatar mainDiv" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
             <div class="row catRow">
               <div class="col-33">
@@ -14,7 +14,7 @@
             </div>
             <div class= "row quickInfo">
               <div class="col-25 imageDiv">
-                <img class="imgContent" ng-src="{{group.content.image}}" height="100%" width= "100%">
+                <img class="imgContent" src="{{group.content.image}}" height="100%" width= "100%">
               </div>
               <div class="col-75 quickTitle">
                 <h1>{{group.content.title}}</h1>
@@ -24,20 +24,19 @@
 
           <div class="item item-body item-accordion moreInfoDiv" ng-show="isGroupShown(group)">
               <div class="contentBody col ">
-                   <div class="userInfo col col-top">
+                  <div class="userInfo col col-top">
                     <div class="row">
-                        <div class="col col-20">
-                          <img class="userImg imgRadius" src="http://msdramatv.com/wp-content/uploads/2013/12/beyonce-why-dont-you-love-me-that-grape-juice.png" height="100%" width= "100%">
+                        <div class="col col-25">
+                          <img class="userImg" src="http://msdramatv.com/wp-content/uploads/2013/12/beyonce-why-dont-you-love-me-that-grape-juice.png" height="100%" width= "100%">
                         </div>
-                        <div class="col col-20">
-                          <h3>juanrod</h3>
+                        <div class="col col-75">
+                          <p>juanrod</p>
                         </div>
                    
                     </div>
                   </div>
                   <div class="col col-center userContent">
                   <p>{{group.content.body}}</p>
-                  <p>Gluten-free lomo tofu pickled Etsy, Shoreditch pop-up polaroid authentic meditation swag pork belly next level Pinterest Marfa. Sustainable taxidermy tote bag cold-pressed cardigan meh. Before they sold out bicycle rights PBR, beard pop-up PBR&B Pitchfork lo-fi heirloom narwhal tattooed flexitarian Shoreditch scenester. Meh plaid fap, Thundercats readymade leggings pour-over pug craft beer. High Life try-hard scenester, lomo bicycle rights forage Intelligentsia kitsch Helvetica brunch before they sold out Echo Park. Freegan photo booth organic, roof party occupy vegan health goth asymmetrical heirloom biodiesel artisan pork belly tilde gastropub PBR. Four loko health goth artisan retro.</p>
                 </div>
             </div>
           </div>
@@ -48,12 +47,12 @@
               <i class="icon ion-thumbsup"></i>
               {{count}}
             </a>
-            <a class="tab-item" ng-click="openModal()">
+            <a class="tab-item" href="#">
               
               <i class="icon ion-chatbox"></i>
               10
             </a>
-            <a class="tab-item" href="#" >
+            <a class="tab-item" href="#">
               <i class="icon ion-share"></i>
               
             </a>

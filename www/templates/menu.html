@@ -21,10 +21,13 @@
        <ion-item menu-close href="#/app/home">
           Home
         </ion-item>
-        <ion-item menu-close ng-click="watchDogs">
-          WatchDogs
+        <ion-item menu-close href="#/app/general">
+          General
         </ion-item>
-        <ion-item menu-close href="#/app/lostNFound">
+        <ion-item menu-close href="#/app/watchDogs">
+          Watch Dogs
+        </ion-item>
+        <ion-item menu-close href="#/app/lostFound">
           Lost 'n' Found
         </ion-item>
         <ion-item menu-close href="#/app/market">
@@ -32,6 +35,9 @@
         </ion-item>
         <ion-item menu-close href="#/app/events">
           Events
+        </ion-item>
+        <ion-item menu-close ng-click="doLogin()">
+          Login
         </ion-item>
       </ion-list>
     </ion-content>

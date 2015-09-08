@@ -32,24 +32,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.controllers3'
     controller: 'AppCtrl'
   })    
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.general', {
+    url: '/general',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/general.html',
+        controller: 'mainCtrl'
       }
     }
   })  
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html',
-          controller: 'HomeCtrl'
-        }
-      }
-    })
     .state('app.home', {
       url: '/home',
       views: {
@@ -59,6 +51,43 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.controllers3'
         }
       }
     })
+    .state('app.market', {
+      url: '/market',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/market.html',
+          controller: 'mainCtrl'
+        }
+      }
+    })
+    .state('app.events', {
+      url: '/events',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/events.html',
+          controller: 'mainCtrl'
+        }
+      }
+    })
+    .state('app.lostFound', {
+      url: '/lostFound',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/lostFound.html',
+          controller: 'mainCtrl'
+        }
+      }
+    })
+    .state('app.watchDogs', {
+      url: '/watchDogs',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/watchDogs.html',
+          controller: 'mainCtrl'
+        }
+      }
+    })
+
 
 
   // if none of the above states are matched, use this as the fallback
