@@ -4,4 +4,8 @@
 node_modules/
 platforms/
 plugins/
+<<<<<<< HEAD
 todo
+=======
+lib/
+>>>>>>> e9e2c702017cc5bbe8f4fa8e20e6f54acc21592e

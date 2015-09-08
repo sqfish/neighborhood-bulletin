@@ -1,0 +1,59 @@
+<ion-view view-title="Home">
+  <ion-content>
+    <div class="row">
+      <div class="col-80 col-offset-10">
+        <div class="list card" ng-repeat="group in groups">
+          <div class="item item-avatar mainDiv" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+            <div class="row catRow">
+              <div class="col-33">
+                {{group.category}}
+              </div>
+              <div class="col-33 col-offset-33 locationDiv">
+                {{group.location.address}}
+              </div>
+            </div>
+            <div class= "row quickInfo">
+              <div class="col-25 imageDiv">
+                <img class="imgContent" src="{{group.content.image}}" height="100%" width= "100%">
+              </div>
+              <div class="col-75 quickTitle">
+                <h1>{{group.content.title}}</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="item item-body item-accordion moreInfoDiv" ng-show="isGroupShown(group)">
+              <div class="contentBody col ">
+                  <div class="userInfo col col-top">
+                    <div class="row">
+                      <img class="userImg" src="http://msdramatv.com/wp-content/uploads/2013/12/beyonce-why-dont-you-love-me-that-grape-juice.png" height="100%" width= "100%">
+                    <p>juanrod</p>
+                  </div>
+                  </div>
+                  <div class="col col-center userContent">
+                  <p>{{group.content.body}}</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#">
+
+              <i class="icon ion-thumbsup"></i>
+              5
+            </a>
+            <a class="tab-item" href="#">
+              
+              <i class="icon ion-chatbox"></i>
+              10
+            </a>
+            <a class="tab-item" href="#">
+              <i class="icon ion-share"></i>
+              
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
