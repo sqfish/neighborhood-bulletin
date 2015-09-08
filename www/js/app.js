@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','starter.controllers3', 'starter.mainPage','firebase'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.mainPage','starter.myPostsPage','firebase'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -30,7 +30,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.controllers3'
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
-  })    
+  })
 
   .state('app.search', {
     url: '/search',
@@ -39,17 +39,8 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.controllers3'
         templateUrl: 'templates/search.html'
       }
     }
-  })  
+  })
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html',
-          controller: 'HomeCtrl'
-        }
-      }
-    })
     .state('app.home', {
       url: '/home',
       views: {
@@ -59,7 +50,15 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.controllers3'
         }
       }
     })
-
+   .state('app.myPosts', {
+        url: '/myPosts',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/myPosts.html',
+            controller: 'myPostsCtrl'
+          }
+        }
+      })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
