@@ -2,22 +2,22 @@ angular.module('starter.mainPage', ["firebase"])
 
 .controller('mainCtrl', function($scope, $firebaseArray) {
   var postsRef = new Firebase("https://neighbor-board.firebaseio.com/posts");
-  $scope.groups = $firebaseArray(postsRef);
+  $scope.posts = $firebaseArray(postsRef);
 
-  console.log($scope.groups);
+  console.log($scope.posts);
   /*
    * if given group is the selected group, deselect it
    * else, select the given group
    */
-  $scope.toggleGroup = function(group) {
-    if ($scope.isGroupShown(group)) {
-      $scope.shownGroup = null;
+  $scope.togglePost = function(post) {
+    if ($scope.isPostShown(post)) {
+      $scope.shownPost = null;
     } else {
-      $scope.shownGroup = group;
+      $scope.shownPost = post;
     }
   };
-  $scope.isGroupShown = function(group) {
-    return $scope.shownGroup === group;
+  $scope.isPostShown = function(post) {
+    return $scope.shownPost === post;
   };
-  
+
 });
