@@ -30,7 +30,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.controllers3'
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
-  })
+  })    
 
   .state('app.search', {
     url: '/search',
@@ -39,7 +39,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.controllers3'
         templateUrl: 'templates/search.html'
       }
     }
-  })
+  })  
 
   .state('app.browse', {
       url: '/browse',
