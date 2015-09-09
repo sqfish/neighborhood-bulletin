@@ -2,10 +2,10 @@
   <ion-content>
     <form ng-submit="postData()">
       <div class="list">
-      <ion-item class="item-divider">
-        <i class="icon {{categoryObject.icon}}"></i>
-        {{categoryObject.title}}
-      </ion-item>
+        <ion-item class="item-divider">
+          <i class="icon {{categoryObject.icon}}"></i>
+          {{categoryObject.title}}
+        </ion-item>
         <label class="item item-input">
           <span class="input-label">Title</span>
           <input type="text" ng-model="newPost.content.title">
@@ -19,11 +19,23 @@
           <input type="time" id="newTime">
         </label>
         <label class="item item-input">
+          <span class="input-label">Street Address</span>
+          <input type="text" ng-model="newPost.location.address">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Zip code</span>
+          <input type="tel" ng-model="newPost.location.zip">
+        </label>
+        <label class="item item-input">
           <span class="input-label">Description</span>
           <textarea ng-model="newPost.content.body"></textarea>
         </label>
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Post</button>
+          <button type="button" class="button" ng-click="openPhotoLibrary()">Add image</button><br><br>
+          <img src="img/ionic.png" id="tempImage" width="300px">
+        </label>
+        <label class="item">
+          <button type="button" class="button button-block button-positive" ng-click="postData()">Post</button>
         </label>
       </div>
     </form>
